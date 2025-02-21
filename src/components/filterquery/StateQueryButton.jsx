@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { CarContext } from "../../context/GreenAppContext";
+import { IoMdClose } from "react-icons/io";
 
 const StateQueryButton = ({ open }) => {
-  const { location } = useContext(CarContext);
-  
+  const { state, setState } = useContext(CarContext);
+
+  const handleClearState = (e) => {
+    e.stopPropagation()
+    setState("All Nigeria");
+  };
 
   return (
     <button
@@ -14,8 +19,13 @@ const StateQueryButton = ({ open }) => {
     >
       <div className="flex flex-col items-start">
         <span className="text-green-600">Location</span>
-        <span>{location}</span>
+        <span>{state}</span>
       </div>
+      {state !== "All Nigeria" ? (
+        <span onClick={handleClearState}>
+          <IoMdClose size={20} className="border border-red-500 " />
+        </span>
+      ) : null}
       <FaArrowRight color="green" />
     </button>
   );

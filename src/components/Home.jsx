@@ -5,6 +5,7 @@ import Body from "./Body";
 const Home = () => {
   return (
     <div className="bg-[#166534]   relative">
+
       <Hero />
       <Body />
     </div>
