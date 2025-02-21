@@ -28,6 +28,7 @@ const Hero = () => {
           type="text"
           placeholder="Search for cars"
           value={nameQuery}
+          id="name_query"
           onChange={(e) => setNameQuery(e.target.value)}
         />
       </div>

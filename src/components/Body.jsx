@@ -34,13 +34,13 @@ const Body = () => {
 
   return (
     <div className="bg-white  relative ">
-      <div className="z-50 max-w-[1500px] mx-auto   bg-white flex flex-col md:flex-row  gap-5   px-5 pt-10">
+      <div className="z-30 max-w-[1500px] mx-auto   bg-white flex flex-col md:flex-row  gap-5   px-5 pt-10">
         <div
-          className={`bg-white p-3 w-fit  shadow-xl rounded-md  text-xs xl:text-base h-fit sticky top-15 z-50  flex flex-col gap-3`}
+          className={`bg-white p-1 md:p-3 w-fit  shadow-xl rounded-md  text-xs xl:text-base h-fit sticky top-15 z-50  flex flex-col gap-3`}
         >
           <button
             onClick={() => setShowFilter(!showFilter)}
-            className="flex border w-fit p-2  rounded-md bg-white cursor-pointer items-center gap-3 md:gap-5 text-green-600 md:pl-5 "
+            className="flex border w-fit p-2  rounded-md bg-white cursor-pointer items-center gap-1 md:gap-3 text-green-600 md:pl-5 "
           >
             <FaFilter />
             <span>Filters</span>
